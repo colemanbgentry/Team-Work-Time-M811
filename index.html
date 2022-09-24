@@ -16,22 +16,42 @@
         <div id="display_01"></div>
         <h4>Second Display</h4>
         <div id="display_02"></div>
+        <input id="addNumber1" placeholder="enter a number" type="number" />
+        <input id="addNumber2" placeholder="enter a number" type="number" />
+        <button onclick="add()">Add</button>
+        <h4>Third Display</h4>
+        <div id="display_03"></div>
         <script>
             function writetoDiv() {
                 let info = document.getElementById("textSpot").value;
                 document.getElementById("display_01").innerHTML = info;
             }
             function numbersHere() {
-                let number = int(document.getElementById("number_01").value);
-                number = numbersEscalate(number);
-                document.getElementById("display_02").innerHTML = number.toString();
+                let number = document.getElementById("number_01").value;
+                const inputInt = parseInt(number);
+                
+                if (inputInt !== NaN) {
+                    document.getElementById("display_02").innerHTML = 'Sum: ' + numbersEscalate(number);
+                }
             }
             function numbersEscalate(n) {
-                let new_value = 0
-                for (let index = 0; index < n; index++) {
-                    new_value += index
+                let new_value = 0;
+                for (let index = 1; index <= n; index++) {
+                    new_value += index;
                 }
-                return new_value
+                return new_value;
+            }
+            function add() {
+                const number1 = document.getElementById("addNumber1").value;
+                const number2 = document.getElementById("addNumber2").value;
+
+                const int1 = parseInt(number1);
+                const int2 = parseInt(number2);
+                
+                if ((int1 !== NaN) & (int2 !== NaN)) {
+                    const total = int1 + int2;
+                    document.getElementById("display_03").innerHTML = 'Total: ' + total;
+                }
             }
         </script>
     </body>
