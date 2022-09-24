@@ -11,13 +11,14 @@
         <button onclick="writetoDiv()">Click me!</button><br>
         <label for="firstOne">Enter a number:</label><br>
         <input type="text" id="number_01" name="firstOne"><br>
+        <button onclick="numbersHere()">NUMBERS!!!</button>
         <h4>First Display</h4>
         <div id="display_01"></div>
         <h4>Second Display</h4>
         <div id="display_02"></div>
         <script>
             function writetoDiv() {
-                let info = document.getElementById("textSpot");
+                let info = document.getElementById("textSpot").value;
                 document.getElementById("display_01").innerHTML = info;
             }
             function numbersHere() {
