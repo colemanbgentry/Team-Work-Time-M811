@@ -5,8 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Group M811 - TicTacToe</title>
         <link rel="stylesheet" href="styles.css" />
+        <style>
+            .board-background {
+                display:grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto auto auto;
+            }
+            .board {
+                border: 1px solid black;
+            }
+        </style>
     </head>
     <body>
-       
+       <h3>Tic Tac Toe</h3>
+       <div class="board-background">
+            <div class="board" id="square1" ontouchend="tic('square1')"></div>
+            <div class="board" id="square2" ontouchend="tic('square2')"></div>
+            <div class="board" id="square3" ontouchend="tic('square3')"></div>
+            <div class="board" id="square4" ontouchend="tic('square4')"></div>
+            <div class="board" id="square5" ontouchend="tic('square5')"></div>
+            <div class="board" id="square6" ontouchend="tic('square6')"></div>
+            <div class="board" id="square7" ontouchend="tic('square7')"></div>
+            <div class="board" id="square8" ontouchend="tic('square8')"></div>
+            <div class="board" id="square9" ontouchend="tic('square9')"></div>
+       </div>
+       <div>
+        <button><a href="/tictactoe.html">Reset</a></button>
+       </div>
+       <script>
+            function tic(x) {
+                let turns = ["X","0","X","0","X","0","X","0","X"]
+                document.getElementById(x).innerHTML = turns.pop();
+            }
+       </script>
     </body>
 </html>
