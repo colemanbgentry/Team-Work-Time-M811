@@ -7,60 +7,10 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-<<<<<<< HEAD
         <ul>
             <li><a href="/buttons.html">Buttons</a></li>
             <li><a href="/arrays.html">Arrays</a></li>
         </ul>
 
-=======
-        <textarea id="textSpot"></textarea>
-        <button onclick="writetoDiv()">Click me!</button><br>
-        <label for="firstOne">Enter a number:</label><br>
-        <input type="text" id="number_01" name="firstOne"><br>
-        <button onclick="numbersHere()">NUMBERS!!!</button>
-        <h4>First Display</h4>
-        <div id="display_01"></div>
-        <h4>Second Display</h4>
-        <div id="display_02"></div>
-        <input id="addNumber1" placeholder="enter a number" type="number" />
-        <input id="addNumber2" placeholder="enter a number" type="number" />
-        <button onclick="add()">Add</button>
-        <h4>Third Display</h4>
-        <div id="display_03"></div>
-        <script>
-            function writetoDiv() {
-                let info = document.getElementById("textSpot").value;
-                document.getElementById("display_01").innerHTML = info;
-            }
-            function numbersHere() {
-                let number = document.getElementById("number_01").value;
-                const inputInt = parseInt(number);
-                
-                if (inputInt !== NaN) {
-                    document.getElementById("display_02").innerHTML = 'Sum: ' + numbersEscalate(number);
-                }
-            }
-            function numbersEscalate(n) {
-                let new_value = 0;
-                for (let index = 1; index <= n; index++) {
-                    new_value += index;
-                }
-                return new_value;
-            }
-            function add() {
-                const number1 = document.getElementById("addNumber1").value;
-                const number2 = document.getElementById("addNumber2").value;
-
-                const int1 = parseInt(number1);
-                const int2 = parseInt(number2);
-                
-                if ((int1 !== NaN) & (int2 !== NaN)) {
-                    const total = int1 + int2;
-                    document.getElementById("display_03").innerHTML = 'Total: ' + total;
-                }
-            }
-        </script>
->>>>>>> f1d32c51113d5c92635d2fe49420dfadccb68e22
     </body>
 </html>
